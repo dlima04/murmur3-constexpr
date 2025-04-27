@@ -187,11 +187,11 @@ constexpr auto murmur3_x64_128(
   return { .first_ = hash1, .second_ = hash2 };
 }
 
-constexpr auto operator "" _mm32(const char8_t* str, size_t len) -> uint32_t {
+constexpr auto operator ""_mm32(const char8_t* str, size_t len) -> uint32_t {
   return murmur3_x86_32({str, len}, 0xbeef);
 }
 
-constexpr auto operator "" _mm128(const char8_t* str, size_t len) -> Murmur3_128 {
+constexpr auto operator ""_mm128(const char8_t* str, size_t len) -> Murmur3_128 {
   return murmur3_x64_128({str, len}, 0xbeef);
 }
 
