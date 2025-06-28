@@ -2,6 +2,7 @@
 #define MURMUR3_HPP
 #include <cstdint>
 #include <string_view>
+#include <bit>
 
 #define U32_CONSTANT(X) X##LU
 #define U64_CONSTANT(X) X##LLU
