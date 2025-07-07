@@ -1,11 +1,16 @@
+/*
+* Copyright (c) 2025 Diago Lima
+* SPDX-License-Identifier: BSD-3-Clause
+*/
+
 #ifndef MURMUR3_HPP
 #define MURMUR3_HPP
 #include <cstdint>
 #include <string_view>
 #include <bit>
 
-#define U32_CONSTANT(X) X##LU
-#define U64_CONSTANT(X) X##LLU
+#define U32_CONSTANT(X) X##UL
+#define U64_CONSTANT(X) X##ULL
 #define AS_U64(CT_EXPR) static_cast<uint64_t>(CT_EXPR)
 #define AS_U32(CT_EXPR) static_cast<uint32_t>(CT_EXPR)
 
@@ -197,3 +202,4 @@ constexpr auto operator ""_mm128(const char8_t* str, size_t len) -> Murmur3_128 
 }
 
 #endif // MURMUR3_HPP
+
